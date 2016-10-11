@@ -5,3 +5,4 @@ var sample = new Uint8Array([73,68,51,4,0,0,0,0,0,81,89,77,73,68,0,0,0,10,0,0,3,
 var id3obj = new ID3(sample);
 var properties = id3obj.getProperties();
 console.log(properties);
+console.log(id3obj.getSize());
