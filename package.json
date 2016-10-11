@@ -3,15 +3,17 @@
   "version": "0.1.0",
   "description": "Simple ID3 parser library in Javascript",
   "main": "id3.js",
+  "repository": "https://github.com/Eyevinn/id3.js",
   "scripts": {
     "prebuild": "npm run test",
-    "build": "node_modules/browserify/bin/cmd.js id3.js > dist/id3.min.js",
+    "build": "node_modules/browserify/bin/cmd.js id3.js > dist/id3.js && node_modules/uglify-js/bin/uglifyjs dist/id3.js > dist/id3.min.js",
     "test": "node_modules/jasmine/bin/jasmine.js"
   },
   "author": "Jonas Birmé <jonas.birme@eyevinn.se> (http://www.eyevinntechnology.se)",
   "license": "MIT",
   "devDependencies": {
     "browserify": "^13.1.0",
-    "jasmine": "^2.5.2"
+    "jasmine": "^2.5.2",
+    "uglify-js": "^2.7.3"
   }
 }
