@@ -5,9 +5,14 @@
   "main": "id3.js",
   "repository": "https://github.com/Eyevinn/id3.js",
   "scripts": {
-    "build": "browserify id3.js --standalone ID3 > dist/id3.js && node_modules/uglify-js/bin/uglifyjs dist/id3.js > dist/id3.min.js",
-    "prebuild": "npm run test",
-    "test": "node_modules/jshint/bin/jshint id3.js && node_modules/karma/bin/karma start karma.conf.js"
+    "clean": "rm dist/*",
+    "prebuild": "npm run clean && npm run test",
+    "build": "browserify id3.js --standalone ID3 > dist/id3.js",
+    "postbuild": "npm run minify",
+    "minify": "node_modules/uglify-js/bin/uglifyjs dist/id3.js > dist/id3.min.js",
+    "pretest": "npm run lint",
+    "lint": "node_modules/jshint/bin/jshint id3.js",
+    "test": "node_modules/karma/bin/karma start karma.conf.js"
   },
   "author": "Jonas Birmé <jonas.birme@eyevinn.se> (http://www.eyevinntechnology.se)",
   "license": "MIT",

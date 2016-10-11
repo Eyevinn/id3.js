@@ -16,10 +16,10 @@ var ID3 = function(data) {
     // b - Extended header
     // c - Experimental indicator
     flags = data[5];
-    this.uses_synch = (flags & 0x80) != 0 ? true : false;
-    this.has_extended_hdr = (flags & 0x40) != 0 ? true : false;
+    this.uses_synch = (flags & 0x80) !== 0 ? true : false;
+    this.has_extended_hdr = (flags & 0x40) !== 0 ? true : false;
     // 4 bytes (4 * %0xxxxxxx) MSB is set to zero in every byte
-    this.size = (data[9] & 0xFF) | ((data[8] & 0xFF) << 7) | ((data[7] & 0xFF) << 14)
+    this.size = (data[9] & 0xFF) | ((data[8] & 0xFF) << 7) | ((data[7] & 0xFF) << 14);
     offset += 10; // Headersize is 10 bytes
 
     if (this.uses_synch) {
@@ -65,7 +65,7 @@ ID3.prototype.getVersion = function() {
 
 ID3.prototype.getSize = function() {
     return this.size;
-}
+};
 
 ID3.prototype.getProperties = function() {
     var properties = [];

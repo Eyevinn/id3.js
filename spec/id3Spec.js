@@ -8,7 +8,7 @@ var expectedProperties = [
 ];
 
 describe("ID3 parser", function() {
-    var ID3 = require('../id3');
+    var ID3 = require('../id3.js');
 
     it("contains valid ID3 data", function() {
         expect(new ID3(validSampleData).getVersion()).toBe('ID3v2.4.0');        
