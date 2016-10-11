@@ -12,7 +12,6 @@
   "author": "Jonas Birmé <jonas.birme@eyevinn.se> (http://www.eyevinntechnology.se)",
   "license": "MIT",
   "devDependencies": {
-    "brfs": "^1.4.3",
     "browserify": "^13.1.0",
     "jasmine": "^2.5.2",
     "jasmine-core": "^2.5.2",
@@ -22,8 +21,5 @@
     "karma-jasmine": "^1.0.2",
     "uglify-js": "^2.7.3",
     "watchify": "^3.7.0"
-  },
-  "dependencies": {
-    "requirejs": "^2.3.2"
   }
 }

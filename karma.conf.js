@@ -30,8 +30,7 @@ module.exports = function(config) {
     },
 
     browserify: {
-        debug: true,
-        standalone: 'ID3'
+        debug: true
     },
 
 
