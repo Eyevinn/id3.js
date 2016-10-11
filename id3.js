@@ -76,5 +76,14 @@ ID3.prototype.getProperties = function() {
     return properties;
 };
 
+ID3.prototype.asObject = function() {
+    var properties = this.getProperties();
+    var obj = {};
+    properties.forEach(function(f) {
+        var key = Object.keys(f)[0];
+        obj[key] = f[key];
+    });
+    return obj;
+};
 
 module.exports = ID3;

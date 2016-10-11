@@ -22,4 +22,10 @@ describe("ID3 parser", function() {
     it("has 5 properties", function() {
         expect(new ID3(validSampleData).getProperties()).toEqual(expectedProperties);
     });
+
+    it("can be represented as a key/value object", function() {
+        var id3obj = new ID3(validSampleData);
+        var obj = id3obj.asObject();
+        expect(obj.YMID).toBe('122703807');
+    });
 });
