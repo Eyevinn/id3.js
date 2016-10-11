@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Eyevinn/id3.js.svg?branch=master)](https://travis-ci.org/Eyevinn/id3.js)
+
 ## Description
 This is a simple ID3 parser library in Javascript. It parses ID3 data packed in an Uint8Array and
 returns an array of properties. 
