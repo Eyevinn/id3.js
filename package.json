@@ -1,0 +1,11 @@
+{
+  "name": "id3.js",
+  "version": "1.0.0",
+  "description": "Javascript parser of ID3 frames",
+  "main": "id3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jonas Birmé <jonas.birme@eyevinn.se> (http://www.eyevinntechnology.se)",
+  "license": "MIT"
+}
