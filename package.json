@@ -1,7 +1,7 @@
 {
-  "name": "id3.js",
-  "version": "1.0.0",
-  "description": "Javascript parser of ID3 frames",
+  "name": "simple-id3.js",
+  "version": "0.1.0",
+  "description": "Simple ID3 parser library in Javascript",
   "main": "id3.js",
   "scripts": {
     "prebuild": "npm run test",
