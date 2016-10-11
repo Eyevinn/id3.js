@@ -5,15 +5,25 @@
   "main": "id3.js",
   "repository": "https://github.com/Eyevinn/id3.js",
   "scripts": {
-    "prebuild": "npm run test",
     "build": "node_modules/browserify/bin/cmd.js id3.js > dist/id3.js && node_modules/uglify-js/bin/uglifyjs dist/id3.js > dist/id3.min.js",
-    "test": "node_modules/jasmine/bin/jasmine.js"
+    "prebuild": "npm run test",
+    "test": "node_modules/karma/bin/karma start karma.conf.js"
   },
   "author": "Jonas Birmé <jonas.birme@eyevinn.se> (http://www.eyevinntechnology.se)",
   "license": "MIT",
   "devDependencies": {
+    "brfs": "^1.4.3",
     "browserify": "^13.1.0",
     "jasmine": "^2.5.2",
-    "uglify-js": "^2.7.3"
+    "jasmine-core": "^2.5.2",
+    "karma": "^1.3.0",
+    "karma-browserify": "^5.1.0",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-jasmine": "^1.0.2",
+    "uglify-js": "^2.7.3",
+    "watchify": "^3.7.0"
+  },
+  "dependencies": {
+    "requirejs": "^2.3.2"
   }
 }
