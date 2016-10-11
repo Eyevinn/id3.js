@@ -31,7 +31,7 @@ module.exports = function(config) {
 
     browserify: {
         debug: true,
-        transform: [ 'brfs' ]
+        standalone: 'ID3'
     },
 
 

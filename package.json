@@ -5,7 +5,7 @@
   "main": "id3.js",
   "repository": "https://github.com/Eyevinn/id3.js",
   "scripts": {
-    "build": "node_modules/browserify/bin/cmd.js id3.js > dist/id3.js && node_modules/uglify-js/bin/uglifyjs dist/id3.js > dist/id3.min.js",
+    "build": "browserify id3.js --standalone ID3 > dist/id3.js && node_modules/uglify-js/bin/uglifyjs dist/id3.js > dist/id3.min.js",
     "prebuild": "npm run test",
     "test": "node_modules/karma/bin/karma start karma.conf.js"
   },
